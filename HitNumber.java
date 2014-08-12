@@ -33,12 +33,13 @@ public class HitNumber {
 		}*/
 		
 		for(int i = 0;i < digit;i++){
-			randomNum[i] = rd.nextInt(4);
-			for(int j = 0;j < i;){
+			randomNum[i] = rd.nextInt(10);
+			for(int j = 0;j < i;j++){
 				boolean flg = true;
 				while(flg){
 					if(randomNum[i] == randomNum[j]){
-						randomNum[i] = rd.nextInt(4);
+						randomNum[i] = rd.nextInt(10);
+						j = -1;
 						break;
 					}
 					else{
